@@ -13,9 +13,9 @@ RUN wget -O "jdk.rpm" --no-check-certificate --no-cookies \
 RUN rpm -ivh jdk.rpm
 ENV JAVA_HOME /usr/java/default
 
-# gradle 2.6
-RUN wget -qO- https://services.gradle.org/distributions/gradle-2.7-bin.zip | jar xvf /dev/stdin
-ENV GRADLE_BIN /opt/gradle-2.7/bin
+# gradle 2.9
+RUN wget -qO- https://services.gradle.org/distributions/gradle-2.9-bin.zip | jar xvf /dev/stdin
+ENV GRADLE_BIN /opt/gradle-2.9/bin
 RUN chmod +x ${GRADLE_BIN}/gradle
 ENV PATH $PATH:${GRADLE_BIN}
 
